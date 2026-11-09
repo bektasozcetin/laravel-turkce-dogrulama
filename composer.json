@@ -1,0 +1,53 @@
+{
+    "name": "bektasozcetin/laravel-turkce-dogrulama",
+    "description": "Türkiye'ye özgü doğrulama kuralları ve biçimlendiriciler: plaka, şase (VIN), TC kimlik no, vergi no, IBAN ve cep telefonu.",
+    "keywords": ["laravel", "validation", "turkey", "turkce", "plaka", "vin", "tckn", "vkn", "iban"],
+    "homepage": "https://github.com/bektasozcetin/laravel-turkce-dogrulama",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bektaş Özçetin",
+            "homepage": "https://github.com/bektasozcetin"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/validation": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bektasozcetin\\TurkceDogrulama\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bektasozcetin\\TurkceDogrulama\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bektasozcetin\\TurkceDogrulama\\TurkceDogrulamaServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
